@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  <title>STIBO Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li class="dropdown">
-        <a href="#">Home</a>
-      </li>
-      <li class="dropdown">
-        <a href="#">Modules</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Product Master</a></li>
-          <li><a href="#">Supplier Info</a></li>
-          <li><a href="#">Workflows</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Reports</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Daily Status</a></li>
-          <li><a href="#">Monthly Report</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Settings</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">User Management</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>STIBO Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+        <h1>STIBO Dashboard</h1>
+      </div>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="/index.html">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#">STIBO Workbench</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Prod Workbench</a></li>
+            <li><a href="#">Test Workbench</a></li>
+            <li><a href="#">QA Workbench</a></li>
+            <li><a href="#">Dev Workbench</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#">BMC Portal</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Incident Management</a></li>
+              <li><a href="#">Smart</a></li>
+              <li><a href="#">QA Workbench</a></li>
+            </ul>
+          </li>
+        <li class="dropdown">
+          <a href="#">Reports</a>
+          <ul class="dropdown-menu">
+            <li><a href="/Pages/bmsScraper.html">Daily Status</a></li>
+            <li><a href="#">Monthly Report</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
 
-  <main>
-    <h1>Welcome to the STIBO Dashboard</h1>
-    <p>Select an option from the navigation menu to get started.</p>
-  </main>
+    <div class="menubar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <main>
+      <h1>Welcome to the STIBO Dashboard</h1>
+      <p>Select an option from the navigation menu to get started.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
