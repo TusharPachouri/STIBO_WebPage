@@ -209,7 +209,11 @@
           let tableHTML =
             "<table><thead><tr><th>Incident</th><th>Name</th><th>Date</th><th>Aging</th></tr></thead><tbody>";
           arr.forEach((item) => {
-            tableHTML += `<tr><td>${item.Incident}</td><td>${item.Name}</td><td>${item.FormattedDate}</td><td>${item.AgingInDays} Days</td></tr>`;
+            let displayName =
+              item.Name === "Bhagyashree R Sonawane"
+                ? "Bhagyashree"
+                : item.Name;
+            tableHTML += `<tr><td>${item.Incident}</td><td>${displayName}</td><td>${item.FormattedDate}</td><td>${item.AgingInDays} Days</td></tr>`;
           });
           tableHTML += "</tbody></table>";
 
