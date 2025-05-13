@@ -6,11 +6,23 @@
   padding: 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color:#004c54
 
-}
+html, body {
+    font-family: "Poppins", sans-serif;
+    background-color:#004c54;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1; /* Takes up available space */
+  }
+  body {
+    flex: 1;
+  }
+
 
 nav {
   padding: 20px 5%; /* Added more padding from top */
@@ -22,7 +34,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
   z-index: 10;
   position: relative;
-  border-radius: 8px; /* Optional: added a border radius for rounded corners */
+  border-radius: 10px; /* Optional: added a border radius for rounded corners */
   margin-top: 20px; /* Added some gap from the top */
   transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
 }
@@ -46,6 +58,17 @@ nav .logo h1 {
   color: white;
   font-size: 1.2rem;
 }
+
+/* Optional: added a border radius for rounded corners */
+.logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logo a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
 
 .nav-links {
   list-style: none;
@@ -135,6 +158,149 @@ nav .logo h1 {
   text-decoration: none;
   font-size: 18px;
 }
+
+/* For containers */
+
+      /* body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f9f9;
+      padding: px;
+    } */
+    .container {
+        display: flex;
+        gap: 20px;
+        padding: 20px 5%; /* Similar padding as the nav bar */
+        background-color: #004f5f; /* Same background color as the nav bar */
+        border-radius: 8px; /* Adding border radius for consistency */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Same shadow as the nav bar */
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px; /* Matching margin-top to keep some space from the top */
+        transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+      }
+
+      .container:hover {
+        background-color: #006678; /* Darker shade on hover, like the nav bar */
+      }
+
+      .section {
+        background-color: #fff;
+        padding: 30px;
+        padding-top: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        width: 48%;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        color: #004f5f;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+        font-family: monospace;
+        padding: 10px;
+        border: 1px solid #003b42; /* Slightly darker border than the background */
+        background-color: #003b42; /* Slightly darker background to blend with the nav */
+        color: white; /* White text color for contrast */
+        border-radius: 8px;
+        resize: vertical;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid #444;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #004f5f;
+        color: white;
+        text-align: left;
+      }
+      thead {
+        background-color: #004f5f;
+        color: white;
+        text-align: left;
+      }
+
+      .copy-button {
+        margin: 10px 0;
+        padding: 10px 18px;
+        font-size: 14px;
+        background-color: #004f5f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .copy-button:hover {
+        background-color: #006678;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          width: 100%;
+        }
+
+        textarea {
+          height: 120px;
+        }
+      }
+
+
+/* Add your styles here */
+
+.footer {
+    background-color: #004F5F;
+    padding: 10px 5%;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #007B8A;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -1px 3px;
+    border-radius: 10px 10px 0 0;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* Add your styles here */
+.footer-link {
+    color: #00BFFF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    
+  }
+  .footer-link a:hover {
+    color: #00BFFF; /* Light blue color on hover */
+      text-decoration: underline; /* Underline effect on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+  }
+  footer:hover {
+    background-color: #006678; /* Darker shade on hover */
+  }
 
 /* Responsive */
 @media screen and (max-width: 790px) {

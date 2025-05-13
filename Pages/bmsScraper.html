@@ -6,120 +6,14 @@
     <title>Object to Table Converter</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-    <style>
-      /* body {
-      font-family: "Poppins", sans-serif;
-      background-color: #f9f9f9;
-      padding: px;
-    } */
-
-      .container {
-        display: flex;
-        gap: 20px;
-        padding: 20px 5%; /* Similar padding as the nav bar */
-        background-color: #004f5f; /* Same background color as the nav bar */
-        border-radius: 8px; /* Adding border radius for consistency */
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Same shadow as the nav bar */
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-top: 20px; /* Matching margin-top to keep some space from the top */
-        transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
-      }
-
-      .container:hover {
-        background-color: #006678; /* Darker shade on hover, like the nav bar */
-      }
-
-      .section {
-        background-color: #fff;
-        padding: 30px;
-        padding-top: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        width: 48%;
-        box-sizing: border-box;
-      }
-
-      @media (max-width: 768px) {
-        .section {
-          width: 100%;
-        }
-      }
-
-      h2 {
-        margin-bottom: 10px;
-        color: #004f5f;
-      }
-
-      textarea {
-        width: 100%;
-        height: 150px;
-        margin-bottom: 10px;
-        font-family: monospace;
-        padding: 10px;
-        border: 1px solid #003b42; /* Slightly darker border than the background */
-        background-color: #003b42; /* Slightly darker background to blend with the nav */
-        color: white; /* White text color for contrast */
-        border-radius: 8px;
-        resize: vertical;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-
-      th,
-      td {
-        border: 1px solid #444;
-        padding: 8px;
-        text-align: left;
-      }
-
-      th {
-        background-color: #004f5f;
-        color: white;
-        text-align: left;
-      }
-      thead {
-        background-color: #004f5f;
-        color: white;
-        text-align: left;
-      }
-
-      .copy-button {
-        margin: 10px 0;
-        padding: 10px 18px;
-        font-size: 14px;
-        background-color: #004f5f;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .copy-button:hover {
-        background-color: #006678;
-      }
-
-      @media (max-width: 768px) {
-        .section {
-          width: 100%;
-        }
-
-        textarea {
-          height: 120px;
-        }
-      }
-    </style>
   </head>
   <body>
     <nav>
       <div class="logo">
-        <img src="../images/logo.png" alt="logo" />
-        <h1>STIBO Dashboard</h1>
+        <a href="/index.html" class="logo no-decoration">
+          <img src="../images/logo.png" alt="logo" />
+          <h1>STIBO Dashboard</h1>
+        </a>
       </div>
       <ul class="nav-links">
         <li class="dropdown">
@@ -156,97 +50,41 @@
         <span class="line"></span>
       </div>
     </nav>
-    <div class="container">
-      <div class="section">
-        <h2>Incident Count Object</h2>
-        <textarea
-          id="incidentCountInput"
-          placeholder="Paste the Incident Count object here..."
-        ></textarea>
-        <button class="copy-button" onclick="renderIncidentCount()">
-          Render & Copy Table
-        </button>
-        <div id="incidentCountTable"></div>
+    <main>
+      <div class="container">
+        <div class="section">
+          <h2>Incident Count Object</h2>
+          <textarea
+            id="incidentCountInput"
+            placeholder="Paste the Incident Count object here..."
+          ></textarea>
+          <button class="copy-button" onclick="renderIncidentCount()">
+            Render & Copy Table
+          </button>
+          <div id="incidentCountTable"></div>
+        </div>
+
+        <div class="section">
+          <h2>Aging Incidents Array</h2>
+          <textarea
+            id="agingIncidentsInput"
+            placeholder="Paste the Aging Incidents array here..."
+          ></textarea>
+          <button class="copy-button" onclick="renderAgingIncidents()">
+            Render & Copy Table
+          </button>
+          <div id="agingIncidentsTable"></div>
+        </div>
       </div>
-
-      <div class="section">
-        <h2>Aging Incidents Array</h2>
-        <textarea
-          id="agingIncidentsInput"
-          placeholder="Paste the Aging Incidents array here..."
-        ></textarea>
-        <button class="copy-button" onclick="renderAgingIncidents()">
-          Render & Copy Table
-        </button>
-        <div id="agingIncidentsTable"></div>
-      </div>
-    </div>
-
-    <script>
-      function renderIncidentCount() {
-        const input = document.getElementById("incidentCountInput").value;
-        try {
-          const obj = eval("(" + input + ")");
-          let tableHTML =
-            "<table><thead><tr><th>Name</th><th>Incident Count</th></tr></thead><tbody>";
-          for (const [name, count] of Object.entries(obj)) {
-            tableHTML += `<tr><td>${name}</td><td>${count}</td></tr>`;
-          }
-          tableHTML += "</tbody></table>";
-
-          const container = document.getElementById("incidentCountTable");
-          container.innerHTML = tableHTML;
-          copyHTMLToClipboard(tableHTML);
-        } catch (e) {
-          alert("Invalid JavaScript object. Please check the input.");
-        }
-      }
-
-      function renderAgingIncidents() {
-        const input = document.getElementById("agingIncidentsInput").value;
-        try {
-          const arr = eval("(" + input + ")");
-          let tableHTML =
-            "<table><thead><tr><th>Incident</th><th>Name</th><th>Date</th><th>Aging</th></tr></thead><tbody>";
-          arr.forEach((item) => {
-            let displayName =
-              item.Name === "Bhagyashree R Sonawane"
-                ? "Bhagyashree"
-                : item.Name;
-            tableHTML += `<tr><td>${item.Incident}</td><td>${displayName}</td><td>${item.FormattedDate}</td><td>${item.AgingInDays} Days</td></tr>`;
-          });
-          tableHTML += "</tbody></table>";
-
-          const container = document.getElementById("agingIncidentsTable");
-          container.innerHTML = tableHTML;
-          copyHTMLToClipboard(tableHTML);
-        } catch (e) {
-          alert("Invalid JavaScript array. Please check the input.");
-        }
-      }
-
-      function copyHTMLToClipboard(html) {
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = html;
-        document.body.appendChild(tempDiv);
-
-        const range = document.createRange();
-        range.selectNode(tempDiv);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-
-        try {
-          document.execCommand("copy");
-          alert(
-            "HTML table copied to clipboard! You can now paste it in Teams."
-          );
-        } catch (err) {
-          alert("Failed to copy.");
-        }
-
-        window.getSelection().removeAllRanges();
-        document.body.removeChild(tempDiv);
-      }
-    </script>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 STIBO Dashboard. All rights reserved.</p>
+      <p>
+        <a href="/index.html" class="footer-link">Home</a> |
+        <a href="#" class="footer-link">Contact</a> |
+        <a href="#" class="footer-link">Privacy Policy</a>
+      </p>
+    </footer>
+    <script src="../script.js"></script>
   </body>
 </html>
