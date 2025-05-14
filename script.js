@@ -71,24 +71,55 @@ function copyHTMLToClipboard(html) {
   document.body.removeChild(tempDiv);
 }
 
+function copyTopCode() {
+  const codeToCopy = `
+      actual code will be here
+  `;
+
+  navigator.clipboard.writeText(codeToCopy).then(() => {
+    alert("Code snippet copied to clipboard!");
+  }).catch(err => {
+    alert("Failed to copy: " + err);
+  });
+}
+
 
 
 function searchCards() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
-  const cards = document.querySelectorAll(".link-card");
+  const cards = Array.from(document.querySelectorAll(".link-card"));
+  const container = cards[0]?.parentElement; // Assuming all cards share the same parent
+
+  if (!container) return;
+
+  // Reset card content and collect matched/unmatched cards
+  const matched = [];
+  const unmatched = [];
 
   cards.forEach(card => {
-    // Restore original content if not already saved
+    // Restore original content
     if (!card.getAttribute("data-original")) {
       card.setAttribute("data-original", card.innerHTML);
     }
     card.innerHTML = card.getAttribute("data-original");
 
-    if (input === "") return;
-
-    // Recursively highlight text nodes
-    highlightText(card, input);
+    if (input === "") {
+      unmatched.push(card); // No input — treat as unmatched
+    } else {
+      // Check for match
+      const textContent = card.textContent.toLowerCase();
+      if (textContent.includes(input)) {
+        highlightText(card, input);
+        matched.push(card);
+      } else {
+        unmatched.push(card);
+      }
+    }
   });
+
+  // Reorder: matched cards first
+  container.innerHTML = ""; // Clear container
+  matched.concat(unmatched).forEach(card => container.appendChild(card));
 }
 
 function highlightText(element, searchTerm) {
