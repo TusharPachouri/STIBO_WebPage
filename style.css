@@ -51,7 +51,7 @@ nav {
   z-index: 10;
   position: relative;
   border-radius: 10px; /* Optional: added a border radius for rounded corners */
-  margin-top: 20px; /* Added some gap from the top */
+  margin-top: 2px; /* Added some gap from the top */
   transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
   
 }
@@ -235,7 +235,8 @@ color: #000000;
 
       h1 {
         margin-bottom: 10px;
-        color: #ffffff;
+        /* color: #000000; */
+        font-weight: bold;
       }
 
       textarea {
@@ -403,12 +404,15 @@ main {
 
 
 .link-card-section {
-  padding: 40px 5%;
-  margin-top: 40px;
+  padding: 20px 5%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  
 }
 
 .section-title {
   color: white;
+  font-size: 2.4rem;
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
@@ -496,11 +500,13 @@ mark {
 .search-bar {
   width: 50%; /* Set the width to 50% */
   margin: 0 auto; /* Center the search bar horizontally */
-  padding: 10px; /* Optional: padding for better spacing inside the search bar */
+  padding: 20px; /* Optional: padding for better spacing inside the search bar */
   display: block; /* Ensure the search bar is displayed as a block element */
-  padding: 10px; width: 50%; margin-bottom:
-   20px; border-radius: 8px; border: 1px solid #ccc;
-   margin-top: 50px;
+  padding: 10px; width: 50%; 
+  /* margin-bottom: 10px;  */
+  border-radius: 8px; 
+  border: 1px solid #ccc;
+   margin-top: 40px;
 }
 
 mark {
