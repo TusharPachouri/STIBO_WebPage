@@ -48,7 +48,7 @@ html, body {
 
 
 nav {
-  padding: 20px 5%; /* Added more padding from top */
+  padding: 15px 5%; /* Added more padding from top */
   margin-left: 20px 5%; /* Added more padding from top */
   background-color: #004F5F;
   display: flex;
@@ -104,8 +104,10 @@ nav .logo h1 {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
+  margin: 0; /* remove default margin */
+  /* padding-right: 80px; Added padding to align with the logo */
 }
 
 .nav-links li {
@@ -146,6 +148,51 @@ nav .logo h1 {
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* Nested Dropdown Styling */
+.nested-dropdown {
+  position: relative;
+}
+
+.nested-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position it to the right of the parent item */
+  background-color: #004F5F;
+  display: none;
+  list-style: none;
+  min-width: 160px;
+  z-index: 1001;
+  border-left: 1px solid #003366;
+  border-radius: 0 10px 10px 0;
+}
+
+.nested-dropdown-menu li a {
+  padding: 10px;
+  border-bottom: 1px solid #003366;
+  white-space: nowrap;
+}
+
+/* Show nested dropdown on hover */
+.nested-dropdown:hover .nested-dropdown-menu {
+  display: block;
+}
+
+/* Optional: Add arrow icons to indicate submenu (▶ already used in your HTML) */
+.nested-dropdown > a::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Optional hover effect for nested menus */
+.nested-dropdown-menu a:hover {
+  background-color: #006678;
+  color: #00BFFF;
+  text-decoration: underline; /* Underline effect on hover */
 }
 
 /* Hamburger menu */
@@ -325,7 +372,7 @@ color: #000000;
 
 .footer {
   background-color: #004F5F;
-  padding: 10px 5%;
+  padding: 15px 5%;
   color: white;
   text-align: center;
   border-top: 1px solid #007B8A;
