@@ -61,7 +61,7 @@ function copyHTMLToClipboard(html) {
   try {
     document.execCommand("copy");
     alert(
-      "HTML table copied to clipboard! You can now paste it in Teams."
+      "HTML table copied to clipboard!"
     );
   } catch (err) {
     alert("Failed to copy.");
