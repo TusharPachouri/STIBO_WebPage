@@ -27,6 +27,17 @@ html, body {
     flex: 1;
   }
 
+  main p {
+    margin-bottom: 1rem; /* or 16px, adjust as needed */
+  }
+  main h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  main ul {
+    margin-bottom: 1.5rem;
+  }
+
 
 nav {
   padding: 20px 5%; /* Added more padding from top */
