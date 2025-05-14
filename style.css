@@ -438,3 +438,10 @@ mark {
    20px; border-radius: 8px; border: 1px solid #ccc;
    margin-top: 50px;
 }
+
+mark {
+  background-color: yellow;
+  color: black;
+  padding: 0 2px;
+  border-radius: 3px;
+}

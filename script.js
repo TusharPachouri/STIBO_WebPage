@@ -72,19 +72,41 @@ function copyHTMLToClipboard(html) {
 }
 
 
+
 function searchCards() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
   const cards = document.querySelectorAll(".link-card");
 
   cards.forEach(card => {
-    // Remove previous highlights
-    const originalText = card.getAttribute("data-original") || card.innerHTML;
-    card.innerHTML = originalText;
-    card.setAttribute("data-original", originalText);
-
-    if (input !== "") {
-      const regex = new RegExp(`(${input})`, "gi");
-      card.innerHTML = card.innerHTML.replace(regex, `<mark>$1</mark>`);
+    // Restore original content if not already saved
+    if (!card.getAttribute("data-original")) {
+      card.setAttribute("data-original", card.innerHTML);
     }
+    card.innerHTML = card.getAttribute("data-original");
+
+    if (input === "") return;
+
+    // Recursively highlight text nodes
+    highlightText(card, input);
+  });
+}
+
+function highlightText(element, searchTerm) {
+  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+  const nodesToHighlight = [];
+
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node.nodeValue.toLowerCase().includes(searchTerm)) {
+      nodesToHighlight.push(node);
+    }
+  }
+
+  nodesToHighlight.forEach(node => {
+    const regex = new RegExp(`(${searchTerm})`, "gi");
+    const span = document.createElement("span");
+    span.innerHTML = node.nodeValue.replace(regex, "<mark>$1</mark>");
+    node.parentNode.replaceChild(span, node);
   });
 }
