@@ -112,6 +112,7 @@ nav .logo h1 {
 
 .nav-links li {
   position: relative;
+  
 }
 
 .nav-links a {
@@ -132,18 +133,22 @@ nav .logo h1 {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Shift left by 50% of its own width */
   background-color: #004F5F;
   display: none;
   list-style: none;
-  min-width: 160px;
+  min-width: 180px;
   z-index: 1000;
-  
+  border-radius: 8px;
+  padding: 0;
 }
+
 
 .dropdown-menu li a {
   padding: 10px;
   border-bottom: 1px solid #003366;
+  
 }
 
 .dropdown:hover .dropdown-menu {
