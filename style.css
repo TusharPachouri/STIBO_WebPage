@@ -48,6 +48,12 @@ nav:hover {
   background-color: #006678; /* Darker shade on hover */
 }
 
+.logo h1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0; /* remove default margin */
+  padding-top: 2px; /* Added padding to align with the logo */
+}
 nav .logo {
   display: flex;
   align-items: center;
@@ -63,6 +69,7 @@ nav .logo h1 {
   color: white;
   font-size: 1.2rem;
 }
+
 
 /* Optional: added a border radius for rounded corners */
 .logo a {
@@ -163,6 +170,7 @@ nav .logo h1 {
   text-decoration: none;
   font-size: 18px;
 }
+
 
 /* For containers */
 
@@ -333,6 +341,50 @@ color: #000000;
   }
 }
 
+.link-card h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: rgba(0, 79, 95, 0.7); /* Teal-dark glass effect */
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  border-left: 4px solid #00BFFF; /* Bright blue accent */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-card h3:hover {
+  transform: scale(1.03);
+  background-color: rgba(0, 102, 120, 0.8); /* Slightly brighter teal on hover */
+}
+
+
+.resource-link {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px 0;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00BFFF;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+}
+
+.resource-link:hover {
+  background-color: #009ACD;
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 191, 255, 0.4);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+
 main {
   padding: 20px;
 }
@@ -445,3 +497,4 @@ mark {
   padding: 0 2px;
   border-radius: 3px;
 }
+
