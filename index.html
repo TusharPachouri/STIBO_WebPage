@@ -60,8 +60,8 @@
       </ul>
     </div>
 
-    <main style={{ backgroundColor: '#1e1e1e', color: '#ffffff', padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
-  <h1 style={{ color: '#ffffff' }}>Welcome to the STIBO Dashboard</h1>
+    <main style="background-color: #1e1e1e; color: #ffffff; padding: 2rem; font-family: Arial, sans-serif;">
+  <h1 style="color: #ffffff;">Welcome to the STIBO Dashboard</h1>
   <p>Select an option from the navigation menu to get started.</p>
 
   <h2 style={{ color: '#ffffff' }}>About STIBO Systems</h2>
@@ -70,7 +70,7 @@
   </p>
 
   <h2 style={{ color: '#ffffff' }}>What You Can Do with This Dashboard</h2>
-  <ul>
+  <ul style = {{style-type: 'none'}}>
     <li><strong>Manage Product Information:</strong> Ensure consistency and accuracy across product data.</li>
     <li><strong>Improve Customer Insights:</strong> Integrate customer data from various sources for a unified view.</li>
     <li><strong>Govern Data Quality:</strong> Use validation rules and workflows to maintain high data standards.</li>
@@ -82,7 +82,65 @@
   <p>
     STIBO Systems stands out for its flexible architecture, scalability, and focus on data transparency. The platform supports collaboration across departments and systems, ensuring data is always accurate, accessible, and actionable.
   </p>
+
+  <input
+  type="text"
+  id="searchInput"
+  class="search-bar"
+  placeholder="Search Your Topic..."
+  oninput="searchCards()"
+  
+/>
+
+  
+  <section class="link-card-section">
+    <h2 class="section-title">Helpful Resources</h2>
+    <div class="card-grid">
+      
+      <div class="link-card bright-blue">
+        <h3>Development Tools</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a></li>
+          <li><a href="https://stackblitz.com" target="_blank" rel="noopener">StackBlitz</a></li>
+        </ul>
+      </div>
+  
+      <div class="link-card bright-yellow">
+        <h3>Learning Platforms</h3>
+        <ul>
+          <li><a href="https://freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
+          <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+        </ul>
+      </div>
+  
+      <div class="link-card bright-green">
+        <h3>Professional Links</h3>
+        <ul>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://angel.co" target="_blank" rel="noopener">AngelList</a></li>
+          <li><a href="https://kaggle.com" target="_blank" rel="noopener">Kaggle</a></li>
+        </ul>
+      </div>
+  
+      <div class="link-card bright-purple">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="https://stackoverflow.com" target="_blank" rel="noopener">Stack Overflow</a></li>
+          <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to</a></li>
+          <li><a href="https://hashnode.com" target="_blank" rel="noopener">Hashnode</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
 </main>
+
+
     <footer class="footer">
         <p>&copy; 2025 STIBO Dashboard. All rights reserved.</p>
         <p>

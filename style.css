@@ -15,6 +15,10 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    color: #ffffff; /* Bright font */
+    /* font-family: 'Segoe UI', sans-serif; */
+    margin: 0;
+    padding: 1rem;
   }
   main {
     flex: 1; /* Takes up available space */
@@ -37,6 +41,7 @@ nav {
   border-radius: 10px; /* Optional: added a border radius for rounded corners */
   margin-top: 20px; /* Added some gap from the top */
   transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+  
 }
 
 nav:hover {
@@ -276,6 +281,10 @@ color: #000000;
         }
       }
 
+      .p{
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
 
 /* Add your styles here */
 
@@ -326,4 +335,106 @@ color: #000000;
 
 main {
   padding: 20px;
+}
+
+
+.link-card-section {
+  padding: 40px 5%;
+  margin-top: 40px;
+}
+
+.section-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.link-card {
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+}
+
+.link-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.link-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.link-card li {
+  margin-bottom: 8px;
+}
+
+.link-card a {
+  color: #004FFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* Bright Background Color Variants */
+.bright-blue {
+  background-color: #d0eaff;
+}
+.bright-yellow {
+  background-color: #fff3cd;
+}
+.bright-green {
+  background-color: #d4edda;
+}
+.bright-purple {
+  background-color: #e6d6ff;
+}
+
+
+.link-card {
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white; /* or keep your bright-* backgrounds */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 8px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+mark {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+
+.search-bar {
+  width: 50%; /* Set the width to 50% */
+  margin: 0 auto; /* Center the search bar horizontally */
+  padding: 10px; /* Optional: padding for better spacing inside the search bar */
+  display: block; /* Ensure the search bar is displayed as a block element */
+  padding: 10px; width: 50%; margin-bottom:
+   20px; border-radius: 8px; border: 1px solid #ccc;
+   margin-top: 50px;
 }

@@ -70,3 +70,21 @@ function copyHTMLToClipboard(html) {
   window.getSelection().removeAllRanges();
   document.body.removeChild(tempDiv);
 }
+
+
+function searchCards() {
+  const input = document.getElementById("searchInput").value.trim().toLowerCase();
+  const cards = document.querySelectorAll(".link-card");
+
+  cards.forEach(card => {
+    // Remove previous highlights
+    const originalText = card.getAttribute("data-original") || card.innerHTML;
+    card.innerHTML = originalText;
+    card.setAttribute("data-original", originalText);
+
+    if (input !== "") {
+      const regex = new RegExp(`(${input})`, "gi");
+      card.innerHTML = card.innerHTML.replace(regex, `<mark>$1</mark>`);
+    }
+  });
+}
