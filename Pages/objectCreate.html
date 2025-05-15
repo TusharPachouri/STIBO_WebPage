@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Object Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    .section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: monospace;
+    }
+
+    button {
+      padding: 0.7rem 1.5rem;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-top: 1.5rem;
+    }
+
+    .output-html {
+      margin-top: 2rem;
+      background: #fdfdfd;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .link-card {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #d9d2f9;
+    }
+
+    .bright-purple {
+      background-color: #e1d7ff;
+    }
+
+    .resource-link {
+      color: #2a00b7;
+      text-decoration: none;
+    }
+
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>Create Object from Names & Links</h2>
+  
+  <input type="text" id="objectName" placeholder="Enter object name (e.g., myLinks)" />
+
+  <textarea id="docNames" placeholder="Enter names, one per line..."></textarea>
+  <textarea id="docLinks" placeholder="Enter links, one per line..."></textarea>
+
+  <button onclick="generateLinkObject()">Generate & Append Object</button>
+  <button onclick="logObjectToConsole()">Console Final Object</button>
+  <button onclick="generateHTMLElements()">Generate HTML Elements</button>
+  <button onclick="copyGeneratedHTML()">📋 Copy All HTML</button>
+
+  <pre id="generatedObject">Generated object will appear here...</pre>
+
+  <div class="output-html" id="htmlOutput">
+    <!-- Generated HTML blocks will appear here -->
+  </div>
+</div>
+
+<script>
+  let finalObject = {};
+
+  function generateLinkObject() {
+    const nameInput = document.getElementById('objectName').value.trim();
+    const names = document.getElementById('docNames').value.trim().split('\n');
+    const links = document.getElementById('docLinks').value.trim().split('\n');
+    const display = document.getElementById('generatedObject');
+
+    if (!nameInput) {
+      display.textContent = '❌ Please enter a name for your object.';
+      return;
+    }
+
+    if (names.length !== links.length) {
+      display.textContent = '❌ Number of names and links must match.';
+      return;
+    }
+
+    const obj = {};
+    names.forEach((name, i) => {
+      obj[name.trim()] = links[i].trim();
+    });
+
+    finalObject[nameInput] = obj;
+
+    display.textContent = JSON.stringify(finalObject, null, 2);
+
+    // Clear inputs for next entry
+    document.getElementById('objectName').value = '';
+    document.getElementById('docNames').value = '';
+    document.getElementById('docLinks').value = '';
+  }
+
+  function logObjectToConsole() {
+    console.log(finalObject);
+    alert('✅ Final combined object logged to console.');
+  }
+
+  function generateHTMLElements() {
+    const outputDiv = document.getElementById('htmlOutput');
+    outputDiv.innerHTML = ''; // clear previous
+
+    for (const [objName, objLinks] of Object.entries(finalObject)) {
+      const card = document.createElement('div');
+      card.className = 'link-card bright-purple';
+
+      const heading = document.createElement('h3');
+      heading.textContent = objName;
+      card.appendChild(heading);
+
+      const ul = document.createElement('ul');
+
+      for (const [name, link] of Object.entries(objLinks)) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'resource-link';
+        a.textContent = name;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+
+      card.appendChild(ul);
+      outputDiv.appendChild(card);
+    }
+
+    alert('✅ HTML elements generated below. You can now copy them!');
+  }
+
+  function copyGeneratedHTML() {
+    const htmlContent = document.getElementById('htmlOutput').innerHTML;
+
+    if (!htmlContent.trim()) {
+      alert('⚠️ No HTML to copy. Please generate HTML elements first.');
+      return;
+    }
+
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.style.position = 'fixed';
+    tempTextarea.style.opacity = 0;
+    tempTextarea.value = htmlContent;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+
+    alert('✅ HTML copied to clipboard!');
+  }
+</script>
+
+</body>
+</html>
