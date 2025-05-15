@@ -95,6 +95,13 @@ nav .logo h1 {
 .logo a {
     text-decoration: none;
     color: inherit;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .logo a:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: scale(1.02); /* Slightly enlarge the text on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .logo a:visited {
@@ -122,6 +129,7 @@ nav .logo h1 {
   padding: 10px 15px;
   display: block;
   transition: color 0.3s ease; /* Added transition for smooth color change */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links a:hover {
@@ -129,6 +137,7 @@ nav .logo h1 {
     text-decoration: underline; /* Underline effect on hover */
   transform: scale(1.05); /* Slightly enlarge the text on hover */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown-menu {
