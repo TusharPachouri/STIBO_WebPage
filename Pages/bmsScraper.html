@@ -10,64 +10,128 @@
   <body>
     <nav>
       <div class="logo">
-        <a href="#" class="logo no-decoration">
-          <img src="/images/logo.png" alt="logo" />
+        <a href="../index.html" class="logo no-decoration">
+          <img src="../images/logo.png" alt="logo" />
           <h1>STIBO Dashboard</h1>
         </a>
       </div>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="/index.html">Home</a>
+          <a href="../index.html">Home</a>
         </li>
-      </li>
-      <li class="dropdown">
-        <a href="#">Frequently Repository</a>
-        <ul class="dropdown-menu">
-          <li class="nested-dropdown">
-            <a href="#">STIBO Workbench ▶</a>
-            <ul class="nested-dropdown-menu">
-              <li><a href="#">PROD Workbench</a></li>
-              <li><a href="#">TEST Workbench</a></li>
-              <li><a href="#">DEV Workbench</a></li>
-              <li><a href="#">QA Workbench</a></li>
-            </ul>
-          </li>
-          <li class="nested-dropdown">
-            <a href="#">BMS Portal ▶</a>
-            <ul class="nested-dropdown-menu">
-              <li><a href="#">BMS Portal</a></li>
-              <li><a href="#">Smart</a></li>
-              <li><a href="#">Prognosis Feedback</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Monitoring</a></li>
-          <li><a href="/Pages/SearchDOCS.html">Search DOCs </a></li>
-        </ul>
-      </li>
+        <li class="dropdown">
+          <a href="#">Frequently Repository</a>
+          <ul class="dropdown-menu">
+            <li class="nested-dropdown">
+              <a href="#" 
+                >STIBO Workbench ▶</a
+              >
+              <ul class="nested-dropdown-menu">
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >PROD Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >TEST Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >DEV Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >QA Workbench</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nested-dropdown">
+              <a href="#" 
+                >BMS Portal ▶</a
+              >
+              <ul class="nested-dropdown-menu">
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >BMS Portal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >Smart</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >Prognosis Feedback</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" 
+                >Monitoring</a
+              >
+            </li>
+            <li>
+              <a href="SearchDOCS.html">Search DOCs </a>
+            </li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#">Knowledge Repository</a>
           <ul class="dropdown-menu">
-            <li><a href="#">KT Sessions</a></li>
-            <li><a href="#">SOP DOCs</a></li>
-            <li><a href="#">PKB & PKE</a></li>
-            <li><a href="/Pages/architecture.html">Architecture</a></li>
-            <li><a href="#">About Team</a></li>
+            <li>
+              <a href="ktSessions.html" 
+                >KT Sessions</a
+              >
+            </li>
+            <li>
+              <a href="SOPDoc.html" >SOP DOCs</a>
+            </li>
+            <li>
+              <a href="PBI&PKE.html"
+                >PKB & PKE</a
+              >
+            </li>
+            <li>
+              <a href="onboardingPage.html">Onboarding DOC</a>
+            </li>
+            <li>
+              <a href="architecture.html" 
+                >Architecture</a
+              >
+            </li>
+            <li>
+              <a href="aboutUS.html" 
+                >About Team</a
+              >
+            </li>
           </ul>
+        </li>
+
         <li class="dropdown">
           <a href="#">Reports</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Daily</a></li>
-            <li><a href="#">Monthly</a></li>
-            <li><a href="/Pages/SearchDOCS.html">Search DOCs </a></li>
+            <li>
+              <a href="bmsScraper.html">Daily</a>
+            </li>
+            <li>
+              <a href="#" >Monthly</a>
+            </li>
           </ul>
         </li>
       </ul>
     </nav>
     <main>
-      <button class="copy-top-button" onclick="copyTopCode()">📋 Copy Code Snippet</button>
+      <button class="copy-top-button" onclick="copyTopCode()">
+        📋 Copy Code Snippet
+      </button>
 
       <div class="container">
-        
         <div class="section">
           <h2 class="h2bms">Incident Count Object</h2>
           <textarea
@@ -79,7 +143,7 @@
           </button>
           <div id="incidentCountTable"></div>
         </div>
-        
+
         <div class="section">
           <h2 class="h2bms">Aging Incidents Array</h2>
           <textarea

@@ -676,4 +676,243 @@ mark {
   padding: 0 2px;
   border-radius: 3px;
 }
+.onboarding-section {
+  padding: 2rem;
+}
 
+.onboarding-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.onboarding-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.onboarding-item {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 6px rgba(0.08, 0.2, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.onboarding-item:hover {
+  background-color: #006678;
+}
+
+.onboarding-title {
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.onboarding-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6da3ea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.onboarding-btn:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+  color: #65d4ed;
+}
+
+
+/* Scoped CSS for onboarding page only */
+.onboarding-section {
+  padding: 2rem;
+  /* background-color: #f9f9f9; */
+}
+.onboarding-point:hover {
+  background-color: #006678; /* Darker shade on hover */
+}
+
+.onboarding-point {
+  /* background-color: #ffffff; */
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  /* padding: 1.5rem; */
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 6px rgba(0.08, 0.2, 0, 0.25);
+}
+
+.onboarding-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.onboarding-subpoint {
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.onboarding-link {
+  display: inline-block;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6da3ea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.onboarding-link:hover {
+  text-decoration: underline;
+  color: #65d4ed;
+}
+
+.team-section {
+  padding: 3rem 2rem;
+  /* background-color: #f7f9fc; */
+}
+
+.team-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  /* background-color:  */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  /* background-color: #e7f7ff; */
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #4fa6c8;
+  margin-bottom: 0.75rem;
+}
+
+.team-link {
+  font-size: 0.95rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.team-link:hover {
+  text-decoration: underline;
+  color: #005f99;
+}
+
+.architecture-section {
+  padding: 3rem 2rem;
+  /* background-color: #f5f8fb; */
+  
+
+}
+
+.architecture-heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+  
+}
+
+.architecture-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.architecture-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.architecture-image:hover {
+  /* transform: scale(1.02); Slightly enlarge the image on hover */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+}
+
+.architecture-details {
+  max-width: 900px;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.7;
+  /* background-color: ; */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0.2, 0, 0.2, 0.15);
+}
+.architecture-details:hover {
+  background-color: #006678; /* Darker shade on hover */
+  /* transform: scale(1.02); Slightly enlarge the text on hover */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px; /* Shadow effect on hover */
+}
+
+
+@media (min-width: 768px) {
+  .architecture-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .architecture-image {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .architecture-details {
+    flex: 1;
+    box-shadow: 0 5px 6px rgba(0.08, 0.2, 0, 0.25);
+  }
+}

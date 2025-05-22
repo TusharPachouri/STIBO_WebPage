@@ -9,16 +9,15 @@
   </head>
   <body>
     <nav>
-        <div class="logo">
-          <a href="#" class="logo no-decoration">
-            <img src="/images/logo.png" alt="logo" />
-            <h1>STIBO Dashboard</h1>
-          </a>
-        </div>
-        <ul class="nav-links">
-          <li class="dropdown">
-            <a href="/index.html">Home</a>
-          </li>
+      <div class="logo">
+        <a href="../index.html" class="logo no-decoration">
+          <img src="../images/logo.png" alt="logo" />
+          <h1>STIBO Dashboard</h1>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="../index.html">Home</a>
         </li>
         <li class="dropdown">
           <a href="#">Frequently Repository</a>
@@ -26,225 +25,354 @@
             <li class="nested-dropdown">
               <a href="#">STIBO Workbench ▶</a>
               <ul class="nested-dropdown-menu">
-                <li><a href="#">PROD Workbench</a></li>
-                <li><a href="#">TEST Workbench</a></li>
-                <li><a href="#">DEV Workbench</a></li>
-                <li><a href="#">QA Workbench</a></li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >PROD Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >TEST Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >DEV Workbench</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >QA Workbench</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nested-dropdown">
               <a href="#">BMS Portal ▶</a>
               <ul class="nested-dropdown-menu">
-                <li><a href="#">BMS Portal</a></li>
-                <li><a href="#">Smart</a></li>
-                <li><a href="#">Prognosis Feedback</a></li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >BMS Portal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >Smart</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noopener noreferrer"
+                    >Prognosis Feedback</a
+                  >
+                </li>
               </ul>
             </li>
-            <li><a href="#">Monitoring</a></li>
-            <li><a href="/Pages/SearchDOCS.html">Search DOCs </a></li>
+            <li>
+              <a href="#">Monitoring</a>
+            </li>
+            <li>
+              <a href="SearchDOCS.html">Search DOCs </a>
+            </li>
           </ul>
         </li>
-          <li class="dropdown">
-            <a href="#">Knowledge Repository</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">KT Sessions</a></li>
-              <li><a href="#">SOP DOCs</a></li>
-              <li><a href="#">PKB & PKE</a></li>
-              <li><a href="#">Architecture</a></li>
-              <li><a href="#">About Team</a></li>
+        <li class="dropdown">
+          <a href="#">Knowledge Repository</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="ktSessions.html">KT Sessions</a>
+            </li>
+            <li>
+              <a href="SOPDoc.html">SOP DOCs</a>
+            </li>
+            <li>
+              <a href="PBI&PKE.html">PKB & PKE</a>
+            </li>
+            <li>
+              <a href="onboardingPage.html">Onboarding DOC</a>
+            </li>
+            <li>
+              <a href="architecture.html">Architecture</a>
+            </li>
+            <li>
+              <a href="aboutUS.html">About Team</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Reports</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="bmsScraper.html">Daily</a>
+            </li>
+            <li>
+              <a href="#">Monthly</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="Search_here">Search Here:</h1>
+      <input
+        type="text"
+        id="searchInput"
+        class="search-bar"
+        placeholder="Search Your Topic..."
+        oninput="searchCards()"
+      />
+
+      <section class="link-card-section">
+        <h1 class="Search_here">Helpful Resources</h1>
+
+        <div class="card-grid">
+          <div class="link-card bright-blue">
+            <h3>Development Tools</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://codepen.io"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >CodePen</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stackblitz.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >StackBlitz</a
+                >
+              </li>
             </ul>
-          <li class="dropdown">
-            <a href="#">Reports</a>
-            <ul class="dropdown-menu">
-              <li><a href="/Pages/bmsScraper.html">Daily</a></li>
-              <li><a href="#">Monthly</a></li>
+          </div>
+
+          <div class="link-card bright-yellow">
+            <h3>Learning Platforms</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://freecodecamp.org"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >freeCodeCamp</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >MDN Web Docs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://w3schools.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >W3Schools</a
+                >
+              </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-   <main>
-    <h1 class="Search_here"> Search Here:</h1>
-    <input
-    type="text"
-    id="searchInput"
-    class="search-bar"
-    placeholder="Search Your Topic..."
-    oninput="searchCards()"
-  />
+          </div>
 
-  <section class="link-card-section">
-    <h1 class="Search_here">Helpful Resources</h1>
-    
-    <div class="card-grid">
-      <div class="link-card bright-blue">
-        <h3>Development Tools</h3>
-        <ul>
-          <li>
-            <a
-              href="https://github.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://codepen.io"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >CodePen</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://stackblitz.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >StackBlitz</a
-            >
-          </li>
-        </ul>
-      </div>
-      
-
-      <div class="link-card bright-yellow">
-        <h3>Learning Platforms</h3>
-        <ul>
-          <li>
-            <a
-              href="https://freecodecamp.org"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >freeCodeCamp</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://developer.mozilla.org"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >MDN Web Docs</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://w3schools.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >W3Schools</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div class="link-card bright-green">
-        <h3>Professional Links</h3>
-        <ul>
-          <li>
-            <a
-              href="https://linkedin.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://angel.co"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >AngelList</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://kaggle.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >Kaggle</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="link-card bright-purple"><h3>Links</h3><ul><li><a href="https://youtube.com" target="_blank" rel="noopener" class="resource-link">YouTube</a></li><li><a href="https://github.com" target="_blank" rel="noopener" class="resource-link">GitHub</a></li><li><a href="https://hashnode.com" target="_blank" rel="noopener" class="resource-link">Hashnode</a></li><li><a href="https://stackoverflow.com" target="_blank" rel="noopener" class="resource-link">Stack Overflow</a></li></ul></div>
-      <div class="link-card bright-purple"><h3>links2</h3><ul><li><a href="https://youtube.com" target="_blank" rel="noopener" class="resource-link">YouTube</a></li><li><a href="https://github.com" target="_blank" rel="noopener" class="resource-link">GitHub</a></li><li><a href="https://hashnode.com" target="_blank" rel="noopener" class="resource-link">Hashnode</a></li><li><a href="https://stackoverflow.com" target="_blank" rel="noopener" class="resource-link">Stack Overflow</a></li></ul></div>
-      <div class="link-card bright-purple">
-        <h3>Community</h3>
-        <ul>
-          <li>
-            <a
-              href="https://stackoverflow.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >Stack Overflow</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://dev.to"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://hashnode.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >Hashnode</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="link-card bright-purple">
-        <h3>Community</h3>
-        <ul>
-          <li>
-            <a
-              href="https://stackoverflow.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >Stack Overflow</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://dev.to"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://hashnode.com"
-              class="resource-link"
-              target="_blank"
-              rel="noopener"
-              >Hashnode</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-    
-   </main>
+          <div class="link-card bright-green">
+            <h3>Professional Links</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://angel.co"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >AngelList</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://kaggle.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >Kaggle</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="link-card bright-purple">
+            <h3>Links</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hashnode.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >Hashnode</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stackoverflow.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >Stack Overflow</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="link-card bright-purple">
+            <h3>links2</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hashnode.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >Hashnode</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stackoverflow.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-link"
+                  >Stack Overflow</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="link-card bright-purple">
+            <h3>Community</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://stackoverflow.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >Stack Overflow</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://dev.to"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hashnode.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >Hashnode</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="link-card bright-purple">
+            <h3>Community</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://stackoverflow.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >Stack Overflow</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://dev.to"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://hashnode.com"
+                  class="resource-link"
+                  target="_blank"
+                  rel="noopener"
+                  >Hashnode</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <p>&copy; 2025 STIBO Dashboard. All rights reserved.</p>
       <p>

@@ -91,7 +91,7 @@
               <a href="onboardingPage.html">Onboarding DOC</a>
             </li>
             <li>
-              <a href="#">Architecture</a>
+              <a href="architecture.html">Architecture</a>
             </li>
             <li>
               <a href="aboutUS.html">About Team</a>
@@ -113,30 +113,89 @@
       </ul>
     </nav>
     <main>
-      <!-- Architecture Section -->
-      <section class="architecture-section">
-        <h2 class="architecture-heading">STIBO Architecture</h2>
-        <div class="architecture-container">
-          <img
-            src="../images/stibo.jpg"
-            alt="System Architecture Diagram"
-            class="architecture-image"
-          />
-          <div class="architecture-details">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptas recusandae excepturi debitis facere! Laborum, nesciunt quo necessitatibus quibusdam dignissimos natus, reprehenderit obcaecati fugiat ad dolores accusantium est numquam nisi.
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, consequuntur. Maxime consectetur aliquid dolorum facere modi nemo exercitationem deserunt ipsa aliquam corporis possimus amet, earum, obcaecati omnis cum in dolorem?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel illum beatae dicta eveniet perspiciatis modi facilis odit, natus iusto dignissimos. Eius ea aliquid nulla eligendi ut debitis molestiae? Rem, expedita.
-            </p>
+      <section class="onboarding-section">
+        <h1 class="Search_here">Search Any SOP Doc Here:</h1>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-bar"
+          placeholder="Search Your Topic..."
+          oninput="searchCards2()"
+        />
+
+        <div class="onboarding-section">
+            <div class="onboarding-container">
+              <div class="onboarding-column" id="leftColumn">
+                <div class="onboarding-item">
+                  <p class="onboarding-title">Node.js Crash Course</p>
+                  <a
+                    href="https://example.com/nodejs"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+                <div class="onboarding-item">
+                  <p class="onboarding-title">React Hooks Deep Dive</p>
+                  <a
+                    href="https://example.com/react-hooks"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+                <div class="onboarding-item">
+                  <p class="onboarding-title">Git & GitHub Basics</p>
+                  <a
+                    href="https://example.com/git"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+              </div>
+          
+              <div class="onboarding-column" id="rightColumn">
+                <div class="onboarding-item">
+                  <p class="onboarding-title">Docker Essentials</p>
+                  <a
+                    href="https://example.com/docker"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+                <div class="onboarding-item">
+                  <p class="onboarding-title">CI/CD with Jenkins</p>
+                  <a
+                    href="https://example.com/jenkins"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+                <div class="onboarding-item">
+                  <p class="onboarding-title">MongoDB for Beginners</p>
+                  <a
+                    href="https://example.com/mongodb"
+                    target="_blank"
+                    rel="noopener"
+                    class="onboarding-btn"
+                    >Open In New Tab</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          
       </section>
     </main>
-    
+
     <footer class="footer">
       <p>&copy; 2025 STIBO Dashboard. All rights reserved.</p>
       <p>

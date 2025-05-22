@@ -141,3 +141,31 @@ function highlightText(element, searchTerm) {
     node.parentNode.replaceChild(span, node);
   });
 }
+
+function searchCards2() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const left = document.getElementById("leftColumn");
+  const right = document.getElementById("rightColumn");
+
+  const allCards = [...left.children, ...right.children];
+
+  allCards.forEach(card => {
+    card.style.display = "none";
+  });
+
+  let matchFound = false;
+
+  allCards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    if (text.includes(input)) {
+      card.style.display = "block";
+      matchFound = true;
+    }
+  });
+
+  if (input === "") {
+    allCards.forEach(card => {
+      card.style.display = "block";
+    });
+  }
+}
